@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% block content%}
+     {{Trainee}}
+
+
+
+<table class="table" border="1" width="100%">
+    <tr>
+        <th>ID</th>  <th>Name</th>   <th>Branch</th>   <th>course</th>  <th>Update</th>  <th>Delete</th>
+    </tr>
+    {% for t in trainees %}
+    <tr>
+        <td>{{t.id}}</td>
+        <td>{{t.name}}</td>
+        <td>{{t.branch}}</td>
+        <td>{{t.course}}</td>
+        <td><a href="/trainee2/Update/{{t.id}}" class=" btn btn-warning " type="submit"> Update </a></td>
+        <td><a href="/trainee2/Delete/{{t.id}}" class=" btn btn-danger " type="submit"> Delete </a></td>
+        {%endfor%}
+    </tr>
+
+</table>
+{%endblock%}
+
+
+
