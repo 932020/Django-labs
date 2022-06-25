@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-sale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="login">
+      <div class="container">
+        <br /><br />
+        <div class="login-details">
+          <div class="logo">
+           <h1>Login Page</h1>
+          </div>
+          <form action="/user1/login/" method="POST">
+            {% csrf_token %}
+            <div class="name main-input">
+             <label>User Name:</label></br></br>
+              <i class="fa-solid fa-user-pen"></i>
+
+              <input type="text" name="name" id="name" placeholder="Enter Your Name" required pattern="[a-zA-Z\s]{4,}"/>
+            </div></br>
+            <div class="password main-input">
+             <label>User password</label></br></br>
+              <i class="fa-solid fa-lock"></i>
+              <input
+                type="password" name="password" id="password" placeholder="Enter password" required/>
+            </div> <br>
+
+            <input type="submit" name="login" class="submit" value="Login" />
+
+            <div class="forget">
+              <a href="/user1/register/">signup</a></br></br>
+              <a href="#">Forget Password?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

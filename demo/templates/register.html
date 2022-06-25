@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+  </head>
+  <body>
+  {{error}}
+    <div class="login">
+      <div class="container">
+        <br /><br />
+        <div class="login-details">
+          <div class="logo">
+           <h1>Register page</h1>
+          </div>
+
+          <form method="post" action="/user1/register/">
+            {% csrf_token %}
+            <div class="name main-input">
+             <label>User Name:</label></br>
+              <i class="fa-solid fa-user-pen"></i>
+              <input type="text" name="name" id="name" placeholder="Enter Your Name" required pattern="[a-zA-Z\s]{4,}"/>
+            </div></br>
+            <div class="password main-input">
+             <label>User Password:</label></br>
+              <i class="fa-solid fa-lock"></i>
+
+              <input type="password" name="password" id="password" placeholder="........" required/>
+            </div><br>
+            <div class="password main-input">
+             <label>Repeat Password:</label><br>
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" name="repassword" id="repassword" placeholder="Enter user password" required/>
+            </div></br>
+            <div class="email main-input">
+             <label>User Email:</label></br>
+              <i class="fa-solid fa-envelope"></i>
+
+              <input type="email" name="email" id="email" placeholder="Username@gmail.com" required/>
+            </div></br></br>
+
+            <input type="submit" class="submit" value="Register" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
